@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" fill="none">
+  <style>
+    @keyframes spin-a { to { transform: rotate(360deg); } }
+    @keyframes spin-b { to { transform: rotate(-360deg); } }
+
+    .orbit-a { animation: spin-a 22s linear infinite; transform-origin: 400px 100px; }
+    .orbit-b { animation: spin-b 30s linear infinite; transform-origin: 400px 100px; }
+    .orbit-c { animation: spin-a 17s linear infinite; transform-origin: 400px 100px; }
+    .orbit-d { animation: spin-b 38s linear infinite; transform-origin: 400px 100px; }
+    .orbit-e { animation: spin-a 50s linear infinite; transform-origin: 400px 100px; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.85; }
+    }
+    .center { animation: pulse 3s ease-in-out infinite; }
+
+    @keyframes ripple {
+      0% { transform: scale(0.02); opacity: 0.1; stroke-width: 1.2; }
+      100% { transform: scale(1); opacity: 0; stroke-width: 0.15; }
+    }
+    .rip { transform-origin: 400px 100px; animation: ripple 6s ease-out infinite; }
+    .rip-2 { animation-delay: 2s; }
+    .rip-3 { animation-delay: 4s; }
+  </style>
+
+  <!-- Faint crosshairs -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#000" stroke-width="0.3" opacity="0.035"/>
+  <line x1="400" y1="0" x2="400" y2="200" stroke="#000" stroke-width="0.3" opacity="0.035"/>
+
+  <!-- Expanding ripples -->
+  <circle cx="400" cy="100" r="195" stroke="#000" fill="none" class="rip"/>
+  <circle cx="400" cy="100" r="195" stroke="#000" fill="none" class="rip rip-2"/>
+  <circle cx="400" cy="100" r="195" stroke="#000" fill="none" class="rip rip-3"/>
+
+  <!-- Static orbital rings -->
+  <circle cx="400" cy="100" r="35"  stroke="#000" stroke-width="0.4"  opacity="0.10"/>
+  <circle cx="400" cy="100" r="65"  stroke="#000" stroke-width="0.4"  opacity="0.08"/>
+  <circle cx="400" cy="100" r="100" stroke="#000" stroke-width="0.35" opacity="0.06"/>
+  <circle cx="400" cy="100" r="140" stroke="#000" stroke-width="0.3"  opacity="0.045"/>
+  <circle cx="400" cy="100" r="185" stroke="#000" stroke-width="0.25" opacity="0.03"/>
+
+  <!-- Center dot -->
+  <circle cx="400" cy="100" r="3" fill="#000" class="center"/>
+
+  <!-- Orbiting bodies (positioned at center_x + ring_radius) -->
+  <g class="orbit-a">
+    <circle cx="435" cy="100" r="3"   fill="#000" opacity="0.60"/>
+  </g>
+  <g class="orbit-b">
+    <circle cx="465" cy="100" r="2.5" fill="#000" opacity="0.45"/>
+    <circle cx="335" cy="100" r="1.5" fill="#000" opacity="0.20"/>
+  </g>
+  <g class="orbit-c">
+    <circle cx="500" cy="100" r="2.5" fill="#000" opacity="0.40"/>
+  </g>
+  <g class="orbit-d">
+    <circle cx="540" cy="100" r="2"   fill="#000" opacity="0.30"/>
+    <circle cx="260" cy="100" r="1"   fill="#000" opacity="0.15"/>
+  </g>
+  <g class="orbit-e">
+    <circle cx="585" cy="100" r="1.5" fill="#000" opacity="0.20"/>
+    <circle cx="215" cy="100" r="1"   fill="#000" opacity="0.10"/>
+  </g>
+</svg>
