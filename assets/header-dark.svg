@@ -1,65 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" fill="none">
-  <style>
-    @keyframes spin-a { to { transform: rotate(360deg); } }
-    @keyframes spin-b { to { transform: rotate(-360deg); } }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" fill="none" role="img" aria-label="Shreyas Fegade — turning raw signal into legible intelligence">
+  <defs>
+    <linearGradient id="wave" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#586069"/>
+      <stop offset="0.42" stop-color="#8b949e"/>
+      <stop offset="0.72" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+    <linearGradient id="sweepgrad" x1="0" y1="0" x2="0" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#5eead4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes flow   { to { stroke-dashoffset: -260; } }
+      @keyframes sweep  { 0% { transform: translateX(0); opacity: 0; } 7% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(1080px); opacity: 0; } }
+      @keyframes twinkle{ 0%,100% { opacity: 0.10; } 50% { opacity: 0.55; } }
+      @keyframes pulse  { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+      .flow  { stroke-dasharray: 16 244; animation: flow 3.4s linear infinite; }
+      .sweep { animation: sweep 6.5s cubic-bezier(.45,0,.55,1) infinite; }
+      .dust  { animation: twinkle 4s ease-in-out infinite; }
+      .node  { animation: pulse 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    </style>
+  </defs>
 
-    .orbit-a { animation: spin-a 22s linear infinite; transform-origin: 400px 100px; }
-    .orbit-b { animation: spin-b 30s linear infinite; transform-origin: 400px 100px; }
-    .orbit-c { animation: spin-a 17s linear infinite; transform-origin: 400px 100px; }
-    .orbit-d { animation: spin-b 38s linear infinite; transform-origin: 400px 100px; }
-    .orbit-e { animation: spin-a 50s linear infinite; transform-origin: 400px 100px; }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.35; }
-      50% { opacity: 0.85; }
-    }
-    .center { animation: pulse 3s ease-in-out infinite; }
-
-    @keyframes ripple {
-      0% { transform: scale(0.02); opacity: 0.1; stroke-width: 1.2; }
-      100% { transform: scale(1); opacity: 0; stroke-width: 0.15; }
-    }
-    .rip { transform-origin: 400px 100px; animation: ripple 6s ease-out infinite; }
-    .rip-2 { animation-delay: 2s; }
-    .rip-3 { animation-delay: 4s; }
-  </style>
-
-  <!-- Faint crosshairs -->
-  <line x1="0" y1="100" x2="800" y2="100" stroke="#e0e0e0" stroke-width="0.3" opacity="0.08"/>
-  <line x1="400" y1="0" x2="400" y2="200" stroke="#e0e0e0" stroke-width="0.3" opacity="0.08"/>
-
-  <!-- Expanding ripples -->
-  <circle cx="400" cy="100" r="195" stroke="#e0e0e0" fill="none" class="rip"/>
-  <circle cx="400" cy="100" r="195" stroke="#e0e0e0" fill="none" class="rip rip-2"/>
-  <circle cx="400" cy="100" r="195" stroke="#e0e0e0" fill="none" class="rip rip-3"/>
-
-  <!-- Static orbital rings -->
-  <circle cx="400" cy="100" r="35"  stroke="#e0e0e0" stroke-width="0.4"  opacity="0.12"/>
-  <circle cx="400" cy="100" r="65"  stroke="#e0e0e0" stroke-width="0.4"  opacity="0.09"/>
-  <circle cx="400" cy="100" r="100" stroke="#e0e0e0" stroke-width="0.35" opacity="0.07"/>
-  <circle cx="400" cy="100" r="140" stroke="#e0e0e0" stroke-width="0.3"  opacity="0.05"/>
-  <circle cx="400" cy="100" r="185" stroke="#e0e0e0" stroke-width="0.25" opacity="0.035"/>
-
-  <!-- Center dot -->
-  <circle cx="400" cy="100" r="3" fill="#e0e0e0" class="center"/>
-
-  <!-- Orbiting bodies -->
-  <g class="orbit-a">
-    <circle cx="435" cy="100" r="3"   fill="#e0e0e0" opacity="0.60"/>
+  <!-- faint grid -->
+  <g stroke="#30363d" stroke-width="0.6">
+    <line x1="0" y1="44" x2="1200" y2="44" opacity="0.30"/>
+    <line x1="0" y1="88" x2="1200" y2="88" opacity="0.30"/>
+    <line x1="0" y1="132" x2="1200" y2="132" opacity="0.30"/>
+    <line x1="0" y1="176" x2="1200" y2="176" opacity="0.30"/>
+    <line x1="200" y1="0" x2="200" y2="220" opacity="0.22"/>
+    <line x1="400" y1="0" x2="400" y2="220" opacity="0.22"/>
+    <line x1="600" y1="0" x2="600" y2="220" opacity="0.22"/>
+    <line x1="800" y1="0" x2="800" y2="220" opacity="0.22"/>
+    <line x1="1000" y1="0" x2="1000" y2="220" opacity="0.22"/>
   </g>
-  <g class="orbit-b">
-    <circle cx="465" cy="100" r="2.5" fill="#e0e0e0" opacity="0.45"/>
-    <circle cx="335" cy="100" r="1.5" fill="#e0e0e0" opacity="0.20"/>
+
+  <!-- entropy dust: raw noise on the left, thinning to the right -->
+  <g fill="#8b949e">
+    <circle class="dust" cx="48"  cy="70"  r="1.6" style="animation-delay:0s"/>
+    <circle class="dust" cx="92"  cy="150" r="1.3" style="animation-delay:.5s"/>
+    <circle class="dust" cx="120" cy="58"  r="1.8" style="animation-delay:1.1s"/>
+    <circle class="dust" cx="150" cy="120" r="1.2" style="animation-delay:.3s"/>
+    <circle class="dust" cx="178" cy="178" r="1.5" style="animation-delay:1.7s"/>
+    <circle class="dust" cx="205" cy="40"  r="1.3" style="animation-delay:.9s"/>
+    <circle class="dust" cx="236" cy="96"  r="1.7" style="animation-delay:2.1s"/>
+    <circle class="dust" cx="268" cy="160" r="1.2" style="animation-delay:.2s"/>
+    <circle class="dust" cx="300" cy="62"  r="1.4" style="animation-delay:1.4s"/>
+    <circle class="dust" cx="330" cy="132" r="1.1" style="animation-delay:2.6s"/>
+    <circle class="dust" cx="360" cy="186" r="1.3" style="animation-delay:.7s"/>
+    <circle class="dust" cx="392" cy="50"  r="1.2" style="animation-delay:1.9s"/>
+    <circle class="dust" cx="430" cy="108" r="1.0" style="animation-delay:3.0s"/>
+    <circle class="dust" cx="470" cy="170" r="1.1" style="animation-delay:1.2s"/>
+    <circle class="dust" cx="520" cy="64"  r="0.9" style="animation-delay:2.3s"/>
   </g>
-  <g class="orbit-c">
-    <circle cx="500" cy="100" r="2.5" fill="#e0e0e0" opacity="0.40"/>
+
+  <!-- the signal: noisy on the left, resolving into a clean wave on the right -->
+  <path d="M 60 132 L 80 96 L 110 168 L 130 80 L 160 172 L 185 70 L 210 162 L 235 100 L 260 178 L 285 78 L 310 152 L 335 96 L 360 164 L 390 112 L 420 150 L 450 120 L 480 140 L 510 128 L 520 132 L 560 116 L 600 102 L 640 93 L 680 90 L 720 94 L 760 104 L 800 118 L 840 133 L 880 149 L 920 161 L 960 168 L 1000 170 L 1040 165 L 1080 155 L 1120 141 L 1150 134"
+        stroke="url(#wave)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+  <path d="M 60 132 L 80 96 L 110 168 L 130 80 L 160 172 L 185 70 L 210 162 L 235 100 L 260 178 L 285 78 L 310 152 L 335 96 L 360 164 L 390 112 L 420 150 L 450 120 L 480 140 L 510 128 L 520 132 L 560 116 L 600 102 L 640 93 L 680 90 L 720 94 L 760 104 L 800 118 L 840 133 L 880 149 L 920 161 L 960 168 L 1000 170 L 1040 165 L 1080 155 L 1120 141 L 1150 134"
+        class="flow" stroke="#5eead4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- intelligence: the signal resolves into a clean structured graph -->
+  <g stroke="#2dd4bf" stroke-width="1" opacity="0.55">
+    <line x1="980" y1="60" x2="1052" y2="40"/>
+    <line x1="1052" y1="40" x2="1116" y2="74"/>
+    <line x1="1116" y1="74" x2="1060" y2="106"/>
+    <line x1="1060" y1="106" x2="1000" y2="92"/>
+    <line x1="1000" y1="92" x2="980" y2="60"/>
+    <line x1="1000" y1="92" x2="1052" y2="40"/>
   </g>
-  <g class="orbit-d">
-    <circle cx="540" cy="100" r="2"   fill="#e0e0e0" opacity="0.30"/>
-    <circle cx="260" cy="100" r="1"   fill="#e0e0e0" opacity="0.15"/>
+  <g fill="#5eead4" filter="url(#glow)">
+    <circle class="node" cx="980"  cy="60"  r="3.4" style="animation-delay:0s"/>
+    <circle class="node" cx="1052" cy="40"  r="3.0" style="animation-delay:.6s"/>
+    <circle class="node" cx="1116" cy="74"  r="3.2" style="animation-delay:1.2s"/>
+    <circle class="node" cx="1060" cy="106" r="3.0" style="animation-delay:1.8s"/>
+    <circle class="node" cx="1000" cy="92"  r="3.4" style="animation-delay:2.4s"/>
   </g>
-  <g class="orbit-e">
-    <circle cx="585" cy="100" r="1.5" fill="#e0e0e0" opacity="0.20"/>
-    <circle cx="215" cy="100" r="1"   fill="#e0e0e0" opacity="0.10"/>
+
+  <!-- scanning sweep -->
+  <g class="sweep">
+    <rect x="58" y="8" width="2.4" height="204" fill="url(#sweepgrad)"/>
+    <circle cx="59" cy="132" r="3" fill="#5eead4"/>
   </g>
 </svg>
