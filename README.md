@@ -99,6 +99,7 @@ Turns a dense PDF into an interactive **force-directed concept graph** — the p
 ### [Forensics](https://github.com/shreyasfegade/forensics)
 Drop any file to expose what it's hiding — EXIF/GPS leaks, true file type by magic bytes, byte-level **Shannon entropy**, embedded strings, and appended steganography — a full forensic report in ~200ms, entirely in the browser. Custom binary EXIF parser and a canvas-drawn map. **Zero uploads, zero dependencies.**
 
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-0D9488?style=flat-square)](https://forensics-bay.vercel.app)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![Zero Deps](https://img.shields.io/badge/-Zero_Dependencies-30D158?style=flat-square)
