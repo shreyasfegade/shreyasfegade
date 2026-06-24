@@ -65,6 +65,7 @@ A trading tape, a desktop's worth of activity, a 30-page PDF, the bytes inside a
 ### [REGIME](https://github.com/shreyasfegade/regime)
 Classifies any equity into one of four hidden market regimes with a **4-state Gaussian HMM**, then measures each regime's forward edge and stress-tests it with a **walk-forward, out-of-sample backtest**. India-first across NSE / BSE / indices, drawn through a zero-dependency HTML5 Canvas engine animated with GSAP.
 
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-0D9488?style=flat-square)](https://regime-omega.vercel.app)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Canvas](https://img.shields.io/badge/-Canvas_API-E34F26?style=flat-square&logo=html5&logoColor=white)
@@ -87,6 +88,7 @@ Passive focus intelligence for Windows. Samples the foreground window and turns 
 ### [Knowledge Mapper](https://github.com/shreyasfegade/knowledge-mapper)
 Turns a dense PDF into an interactive **force-directed concept graph** — the prerequisite, causal, and dependency links inferred by an LLM through a three-stage pipeline with deterministic scaffolding around every model call. The renderer is a **custom canvas force simulation** with spatial-hash hit testing — no graph library, no embeddings, no clustering package.
 
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-0D9488?style=flat-square)](https://knowledge-mapper-six.vercel.app)
 ![Next.js](https://img.shields.io/badge/-Next.js_15-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/-React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -109,6 +111,7 @@ Drop any file to expose what it's hiding — EXIF/GPS leaks, true file type by m
 ### [Unbored](https://github.com/shreyasfegade/unbored)
 The decision-paralysis killer — for everyone the other five aren't for. Pick a mood and how long you've got; get **one confident thing to watch**, scored across taste, mood, runtime, and diversity and explained in one honest sentence. The "Why now?" line is provider-agnostic across Gemini / DeepSeek / OpenAI / OpenRouter, and every artless title gets **procedural poster art generated in the browser**. 302 passing tests.
 
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-0D9488?style=flat-square)](https://unbored-five.vercel.app)
 ![React](https://img.shields.io/badge/-React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
